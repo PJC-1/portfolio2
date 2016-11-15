@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+  padding: 7px 12px;
+  font-size: 16px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+#logo {
+  position: absolute;
+  color: #fff;
+  padding-left: 40px;
+  font-size: 1.6em;
+}
+
+#overlay {
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#overlay h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0;
+}
+
+#overlay h2 {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin: 0;
+}
+
+#overlay button {
+    margin-top: 10px;
+}
+
+/*-------------------------------------
+            Media Queries
+--------------------------------------*/
+
+/* Screens smaller than 767px */
+@media (max-width: 767px) {
+
+  .video-container {
+      background: url("../img/mobile-hero.jpg") center center/cover no-repeat;
+  }
+
+  .video-background {
+      display: none;
+  }
+
+    #logo {
+      padding-left: 20px;
+      font-size: 1.2em;
+    }
+
+    #overlay h1 {
+        font-size: 2.2em;
+    }
+
+    #overlay h2 {
+        font-size: 1.2em;
+    }
+}
